@@ -713,6 +713,7 @@ where
     let mut err = nvim::Error::new();
     let go_on = unsafe {
         nvim_paste(
+            crate::LUA_INTERNAL_CALL,
             data.into().as_nvim_str(),
             crlf,
             phase as Integer,

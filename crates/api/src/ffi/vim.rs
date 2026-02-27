@@ -226,6 +226,7 @@ unsafe extern "C" {
 
     // https://github.com/neovim/neovim/blob/v0.10.0/src/nvim/api/vim.c#L1235
     pub(crate) fn nvim_paste(
+        channel_id: u64,
         data: NvimStr,
         crlf: bool,
         phase: Integer,
